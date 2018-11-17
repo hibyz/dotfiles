@@ -25,6 +25,9 @@ set PATH $HOME/.cask/bin $PATH
 set -x PATH $HOME/.pyenv/bin $PATH
 source (pyenv init - | psub)
 
+set PATH /sbin $PATH
+
+
 # for bobthefish
 set -g theme_display_git yes
 set -g theme_display_git_dirty no
