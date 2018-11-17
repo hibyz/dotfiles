@@ -1,5 +1,7 @@
 set fish_greeting
+set fish_theme bobthefish
 set -x TERM xterm-256color
+set fish_plugins theme
 
 # fish-dot
 set -U DOT_REPO https://github.com/hibyz/dotfiles.git
@@ -9,6 +11,8 @@ set -U DOT_SCR ~/.dot
 # peco
 function fish_user_key_bindings
   bind \cr 'peco_select_history (commandline -b)'
+#  bind \x] 'peco_change_directory'
+  bind \x1b 'peco_z'
 end
 
 # alias

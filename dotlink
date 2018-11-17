@@ -38,3 +38,5 @@ $DOT_DIR/.jupyter,$HOME/.jupyter
 $DOT_DIR/.bashrc,$HOME/.bashrc
 $DOT_DIR/.config/fish/config.fish,$HOME/.config/fish/config.fish
 
+.config/fish/fishfile,.config/fish/fishfile
+.config/fish/functions/peco_change_directory.fish,.config/fish/functions/peco_change_directory.fish
