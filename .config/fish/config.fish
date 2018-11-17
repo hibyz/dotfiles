@@ -2,18 +2,25 @@ set fish_greeting
 set fish_theme bobthefish
 set -x TERM xterm-256color
 set fish_plugins theme
+set -U FZF_LEGACY_KEYBINDINGS 0
 
 # fish-dot
 set -U DOT_REPO https://github.com/hibyz/dotfiles.git
 set -U DOT_DIR ~/.dotfiles
 set -U DOT_SCR ~/.dot
 
-# peco
-function fish_user_key_bindings
-  bind \cr 'peco_select_history (commandline -b)'
-#  bind \x] 'peco_change_directory'
-  bind \x1b 'peco_z'
+set -g FZF_CTRL_T_COMMAND "command find -L \$dir -type f 2> /dev/null | sed '1d; s#^\./##'"
+
+# gvm
+function gvm
+  bass source ~/.gvm/scripts/gvm ';' gvm $argv
 end
+
+# function go
+#   gvm use go1.11.2 ';' go $argv
+# end
+# 
+set -x GOROOT_BOOTSTRAP GOROOT
 
 # alias
 alias ll='ls -AlF'
@@ -30,7 +37,6 @@ set -x PATH $HOME/.pyenv/bin $PATH
 source (pyenv init - | psub)
 
 set PATH /sbin $PATH
-
 
 # for bobthefish
 set -g theme_display_git yes
@@ -65,3 +71,8 @@ set -g theme_color_scheme dark
 set -g fish_prompt_pwd_dir_length 0
 set -g theme_project_dir_length 1
 set -g theme_newline_cursor yes
+
+
+gvm use go1.11.2 --default
+
+

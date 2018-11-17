@@ -14,3 +14,7 @@ fi
 PS1="[\u@\[\e[0;35m\]\h\[\e[0m\] \W]\\$ "
 
 
+
+[[ -s "/home/airi/.gvm/scripts/gvm" ]] && source "/home/airi/.gvm/scripts/gvm"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
