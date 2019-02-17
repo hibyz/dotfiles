@@ -17,3 +17,17 @@
 (init-loader-load "~/.dotfiles/.emacs.d/inits/")
 (setq init-loader-show-log-after-init t)
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (python-mode web-mode use-package undo-tree smex smartparens py-yapf prodigy popwin pallet nyan-mode multiple-cursors magit init-loader idle-highlight-mode helm-swoop helm-describe-modes helm-descbinds flycheck-cask expand-region exec-path-from-shell elpy))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

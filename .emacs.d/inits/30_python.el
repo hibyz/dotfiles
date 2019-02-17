@@ -1,6 +1,11 @@
+;;; python mode
+(require 'python-mode)
+(add-to-list 'auto-mode-alist '("\\\.py\\\'" . python-mode))
+(add-to-list 'interpreter-mode-alist '("python" . python-mode))
 
 ;;; Elpy を有効化
 (elpy-enable)
+
 ;;; 仮想環境を設定
 (defvar venv-default "~/.pyenv/versions/3.5.0")
 
@@ -8,10 +13,10 @@
 (pyvenv-activate venv-default)
 
 ;;; REPL 環境に IPython を使う
-(elpy-use-ipython)
+;;(elpy-use-ipython)
 
 ;;; 自動補完のバックエンドとして Rope か Jedi を選択
-;(setq elpy-rpc-backend "jedi")
+(setq elpy-rpc-backend "jedi")
 
 ;; インデントのハイライト
 ;; カーソル位置のみ
